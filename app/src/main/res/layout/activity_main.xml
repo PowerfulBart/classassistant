@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/show_tv"
+        android:textColor="@android:color/background_dark"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/success_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录成功"
+        android:onClick="getSuccess"/>
+
+    <Button
+        android:id="@+id/failure_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getFailure"
+        android:text="登录失败"/>
+
+
+    <Button
+        android:id="@+id/error_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getError"
+        android:text="登录错误"/>
+
+</LinearLayout>
