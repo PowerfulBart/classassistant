@@ -1,20 +1,17 @@
-package com.example.zhengbotao.classassistant.mvptest.view;
+package com.example.zhengbotao.classassistant.login;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.zhengbotao.classassistant.R;
 import com.example.zhengbotao.classassistant.base.BaseActivity;
 import com.example.zhengbotao.classassistant.mvptest.Presenter.MvpPresenter;
+import com.example.zhengbotao.classassistant.mvptest.view.IMvpView;
 
 public class MainActivity extends BaseActivity implements IMvpView,View.OnClickListener{
 
-    TextView textView;
     MvpPresenter presenter;
-    private Button successBtn,failureBtn,errorBtn;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,7 +32,7 @@ public class MainActivity extends BaseActivity implements IMvpView,View.OnClickL
 
     @Override
     public void showData(String param) {
-        textView.setText(param);
+      // textView.setText(param);
     }
 
 //    public void getSuccess(View view){
@@ -51,28 +48,28 @@ public class MainActivity extends BaseActivity implements IMvpView,View.OnClickL
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.success_btn:
-                presenter.getData("normal");
-                break;
-            case R.id.failure_btn:
-                presenter.getData("failure");
-                break;
-            case R.id.error_btn:
-                presenter.getData("error");
-                break;
-            default:
-                break;
+//            case R.id.success_btn:
+//                presenter.getData("normal");
+//                break;
+//            case R.id.failure_btn:
+//                presenter.getData("failure");
+//                break;
+//            case R.id.error_btn:
+//                presenter.getData("error");
+//                break;
+//            default:
+//                break;
         }
     }
 
     private void initView() {
-        successBtn = findViewById(R.id.success_btn);
-        failureBtn = findViewById(R.id.failure_btn);
-        errorBtn = findViewById(R.id.error_btn);
-        textView = findViewById(R.id.show_tv);
-
-        successBtn.setOnClickListener(this);
-        failureBtn.setOnClickListener(this);
-        errorBtn.setOnClickListener(this);
+//        successBtn = findViewById(R.id.success_btn);
+//        failureBtn = findViewById(R.id.failure_btn);
+//        errorBtn = findViewById(R.id.error_btn);
+//        textView = findViewById(R.id.show_tv);
+//
+//        successBtn.setOnClickListener(this);
+//        failureBtn.setOnClickListener(this);
+//        errorBtn.setOnClickListener(this);
     }
 }
